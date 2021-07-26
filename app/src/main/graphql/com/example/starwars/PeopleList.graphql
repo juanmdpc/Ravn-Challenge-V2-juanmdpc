@@ -1,0 +1,22 @@
+query peopleList ($first: Int, $after: String) {
+  allPeople (first: $first, after: $after) {
+    totalCount
+    edges {
+      node {
+        id
+        name
+        species {
+          name
+        }
+        homeworld {
+          name
+        }
+      }
+      cursor
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/star_wars_nav"
+    app:startDestination="@id/peopleFragment">
+
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.apolloandroid.view.ui.PeopleFragment"
+        android:label="People of Star Wars"
+        tools:layout="@layout/fragment_people" >
+        <action
+            android:id="@+id/action_peopleFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.apolloandroid.view.ui.DetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_detail" >
+
+        <argument
+            android:name="id"
+            app:argType="string" />
+
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_detailFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+    </fragment>
+</navigation>
