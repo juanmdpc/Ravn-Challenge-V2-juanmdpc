@@ -14,7 +14,6 @@ https://user-images.githubusercontent.com/40974811/126986745-16443c42-80a3-413b-
 ## Architecture
 * Follows the MVVM architecture.
 
-
-#### Asumptions
+#### Assumptions
 1. *Because is a challengue, details-fragment do query data also, for practice ApolloClient.*
 2. *Is my first time with ApolloClient, Kotlin Coroutines, LiveData, Dagger Hilt and MVVM Architecture.*
